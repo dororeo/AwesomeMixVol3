@@ -2,16 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/a23af946f8.js" crossorigin="anonymous"></script>
     <title>Awesome Mix Vol 3</title>
 </head>
 <body>
-    <div class="container">
-        <img id="cassette-background" src="/images/final.png">
+    <div class="walkman">
+        <div class="cassette-body">
+            <img src="images/awesome mix vol 3 cassette background.png" height="250px">
+        </div>
+        <div class="tape-ring1">
+            <img>
+        </div>
+        <div class="tape-ring2">
+            <img>
+        </div>
     </div>
-    
+    <div class="music-player" id="music-player">
+        <div class="music-info">
+            <div class="song-title">Song Title</div>
+            <div class="song-artist">Artist</div>
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        <audio src="songs/01_Creep_Acoustic.mp3" id="audio"></audio>
+        <div class="buttons">
+            <button id="random" class="ctrl-btn">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+            <button id="prev" class="ctrl-btn">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button id="play-pause" class="ctrl-btn">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <button id="next" class="ctrl-btn">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+            <button id="repeat" class="ctrl-btn">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

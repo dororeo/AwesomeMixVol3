@@ -1,15 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
 body{
-    background-color: bisque;
-}
-
-.container{
-    margin: 0 auto;
-    padding-top: 200px;
+    background-image: url(images/app\ background.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: white;
 }
 
-#cassette-background{
-    height: 350px;
+.walkman{
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
 }
+
+.music-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-title{
+    padding: 5px;
+    font-size: 25px;
+}
+
+.song-artist{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.ctrl-btn{
+    border: none;
+}
+
+.random,
+.prev,
+.play-pause,
+.next,
+.repeat {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+    }
