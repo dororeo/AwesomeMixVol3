@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
 
 body{
-    background-image: url(images/app\ background.avif);
+    background-image: url(images/app\ background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,6 +40,17 @@ body{
     text-transform: uppercase;
 }
 
+button{
+    margin: 2.5px;
+    border-radius: 5px;
+    height: 85px;
+    width: 65px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    filter: drop-shadow(2px 3px 2px black);
+}
+
 .buttons{
     display: flex;
     flex-direction: row;
@@ -51,12 +62,25 @@ body{
     border: none;
 }
 
-.random,
-.prev,
-.play-pause,
-.next,
-.repeat {
+#random,
+#prev,
+#play-pause,
+#next,
+#repeat {
     padding: 25px;
     opacity: 0.8;
     transition: opacity .2s;
+    cursor: pointer;
     }
+
+#random:hover,
+#prev:hover,
+#play-pause:hover,
+#next:hover,
+#repeat:hover {
+    padding: 25px;
+    opacity: 1;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
