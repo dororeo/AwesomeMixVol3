@@ -23,25 +23,26 @@
         <div class="music-info">
             <div class="song-title">Song Title</div>
             <div class="song-artist">Artist</div>
-            <div class="progress-container" id="progress-container">
-                <div class="progress" id="progress"></div>
-            </div>
         </div>
-        <audio src="songs/01_Creep_Acoustic.mp3" id="audio"></audio>
+        <div class="song-slider">
+            <div class="current-time">00:00</div>
+             <input type="range" min="1" max="100" value="0" class="slider">
+             <div class="song-duration">00:00</div>
+        </div>
         <div class="buttons">
-            <button id="random" class="ctrl-btn">
+            <button id="random" class="ctrl-btn" onclick="shuffle()">
                 <i class="fa-solid fa-shuffle"></i>
             </button>
-            <button id="prev" class="ctrl-btn">
+            <button id="prev" class="ctrl-btn" onclick="">
                 <i class="fa-solid fa-backward-step"></i>
             </button>
-            <button id="play-pause" class="ctrl-btn">
+            <button id="play-pause" class="ctrl-btn" onclick="playPause()">
                 <i class="fa-solid fa-play"></i>
             </button>
-            <button id="next" class="ctrl-btn">
+            <button id="next" class="ctrl-btn" onclick="">
                 <i class="fa-solid fa-forward-step"></i>
             </button>
-            <button id="repeat" class="ctrl-btn">
+            <button id="repeat" class="ctrl-btn" onclick="">
                 <i class="fa-solid fa-repeat"></i>
             </button>
         </div>
