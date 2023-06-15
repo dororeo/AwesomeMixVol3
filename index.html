@@ -26,23 +26,23 @@
         </div>
         <div class="song-slider">
             <div class="current-time">00:00</div>
-             <input type="range" min="1" max="100" value="0" class="slider">
+             <input type="range" min="1" max="100" value="0" class="slider" onchange="slideTo()">
              <div class="song-duration">00:00</div>
         </div>
         <div class="buttons">
             <button id="random" class="ctrl-btn" onclick="shuffle()">
                 <i class="fa-solid fa-shuffle"></i>
             </button>
-            <button id="prev" class="ctrl-btn" onclick="">
+            <button id="prev" class="ctrl-btn" onclick="prevSong()">
                 <i class="fa-solid fa-backward-step"></i>
             </button>
             <button id="play-pause" class="ctrl-btn" onclick="playPause()">
                 <i class="fa-solid fa-play"></i>
             </button>
-            <button id="next" class="ctrl-btn" onclick="">
+            <button id="next" class="ctrl-btn" onclick="nextSong()">
                 <i class="fa-solid fa-forward-step"></i>
             </button>
-            <button id="repeat" class="ctrl-btn" onclick="">
+            <button id="repeat" class="ctrl-btn" onclick="repeating()">
                 <i class="fa-solid fa-repeat"></i>
             </button>
         </div>
