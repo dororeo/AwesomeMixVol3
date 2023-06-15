@@ -79,30 +79,30 @@ const loadSong = (songIndex) => {
     updateTime = setInterval(setUpdate, 1000);
     currentSong.addEventListener("ended", nextSong);
 
-}
+};
 
 //2. reset after song ends 
 const reset = () => {
     currentTime.innerText = "00:00"
     songDuration.innerText = "00:00"
     slider.value = 0;
-}
+};
 /////////////////////////////////////////////////////
 
 //overall shuffle function
 const shuffle = () => {
     randomSong ? shuffleOff() : shuffleOn();
     shuffleIcon.classList.add('randomActive');
-}
+};
 
 //5. random song
 const shuffleOn = () => {
     randomSong = true;
-}
+};
 
 const shuffleOff = () => {
     randomSong = false;
-}
+};
 
 
 
@@ -110,18 +110,18 @@ const shuffleOff = () => {
 
 const repeating = () => {
     repeatSong ? repeatOff() : repeatOn();
-}
+};
 
 //8. repeat song
 const repeatOn = () => {
     repeatSong = true;
     currentSong.loop();
-}
+};
 
 const repeatOff = () => {
     repeatSong = false;
     nextSong();
-}
+};
 
 /////////////////////////////////////////////////////
 
@@ -129,7 +129,7 @@ const repeatOff = () => {
 
 const playPause = () => {
     songPlaying ? pauseSong() : playSong();
-}
+};
 
 //3. play song
 const playSong = () => {
@@ -139,14 +139,14 @@ const playSong = () => {
 
     //////rotate tape rings of cassette/////
     // rotateRings();
-}
+};
 
 //4. pause song
 const pauseSong = () => {
     currentSong.pause();
     songPlaying = false;
     playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-}
+};
 //6. next song
 /* if loop to check for shuffle, 
 add 1 to index number for next song else math.random */
@@ -164,7 +164,7 @@ const nextSong = () => {
     }
     loadSong(songIndex);
     playSong();
-}
+};
 
 //7. prev song
 const prevSong = () => {
@@ -175,43 +175,45 @@ const prevSong = () => {
     }
     loadSong(songIndex);
     playSong();
-}
+};
 
 //9. slider update when clicked/dragged
-
+  
 const slideTo = () => {
     //calculate position by percentage of slider relative to duration of the song
     let slideTo = currentSong.duration * (slider.value / 100);
     currentSong.currentTime = slideTo;
-}
+};
 
 //setUpdate function
 
 const setUpdate = () => {
     let seekPosition = 0;
-
-    // console.log("durationSecs", durationSecs)
-//check current song duration = legible number
-    if(!isNaN(currentSong.duration)) {
-        seekPosition = currentSong.currentTime * (100 / currentSong.duration);
-        slideTo.value = seekPosition;
-
-        let currentMins = Math.floor(currentSong.currentTime / 60);
-        let currentSecs = Math.floor(currentSong.currentTime - currentMins * 60);
-        let durationMins = Math.floor(currentSong.duration / 60); //gives song duration in mins
-        let durationSecs = Math.floor(currentSong.duration - durationMins * 60);
-
-        if(currentSecs < 10) {currentSecs = "0" + currentSecs; }
-        if(durationSecs < 10) { durationSecs = "0" + durationSecs; }
-        if(currentMins < 10) {currentMins = "0" + currentMins; }
-        if(durationMins < 10) { durationMins = "0" + durationMins; }
- 
-
-        currentTime.innerHTML = currentMins + ":" + currentSecs;
-        songDuration.innerHTML = durationMins + ":" + durationSecs;
-
+    if (!isNaN(currentSong.duration)) {
+        seekPosition = (currentSong.currentTime / currentSong.duration) * 100;
+        slider.value = seekPosition;
+  
+      let currentMins = Math.floor(currentSong.currentTime / 60);
+      let currentSecs = Math.floor(currentSong.currentTime - currentMins * 60);
+      let durationMins = Math.floor(currentSong.duration / 60);
+      let durationSecs = Math.floor(currentSong.duration - durationMins * 60);
+  
+      if (currentSecs < 10) {
+        currentSecs = "0" + currentSecs;
+      }
+      if (durationSecs < 10) {
+        durationSecs = "0" + durationSecs;
+      }
+      if (currentMins < 10) {
+        currentMins = "0" + currentMins;
+      }
+      if (durationMins < 10) {
+        durationMins = "0" + durationMins;
+      }
+  
+      currentTime.innerHTML = currentMins + ":" + currentSecs;
+      songDuration.innerHTML = durationMins + ":" + durationSecs;
     }
-
-}
+  };
 
 loadSong(songIndex);
