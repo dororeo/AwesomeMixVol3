@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
 
 body{
-    background-image: url(images/app\ background.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    background: linear-gradient(-45deg, #1e1e1e, #656668, #1e1e1e, #656668);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +12,18 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: white;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .walkman{
