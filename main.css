@@ -77,6 +77,11 @@ body{
   background: transparent;
 }
 
+.repeatActive, .randomActive {
+    background-color: black;
+    color: greenyellow;
+}
+
 button{
     margin: 2.5px;
     border-radius: 5px;

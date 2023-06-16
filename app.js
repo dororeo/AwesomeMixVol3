@@ -3,14 +3,13 @@ const artistName = document.querySelector(".song-artist");
 
 const playPauseBtn = document.getElementById("play-pause");
 const repeatBtn = document.getElementById("repeat");
-
+const shuffleBtn = document.getElementById("random")
 const slider = document.querySelector(".slider");
 
 let currentTime = document.querySelector(".current-time");
 let songDuration = document.querySelector(".song-duration");
-let shuffleIcon = document.querySelector(".fa-shuffle");
-
 let currentSong = document.createElement("audio");
+
 let songIndex = 0;
 let songPlaying = false;
 let randomSong = false;
@@ -85,16 +84,17 @@ const reset = () => {
 //overall shuffle function
 const shuffle = () => {
   randomSong ? shuffleOff() : shuffleOn();
-  shuffleIcon.classList.add("randomActive");
 };
 
 //5. random song
 const shuffleOn = () => {
   randomSong = true;
+  shuffleBtn.classList.add("randomActive");
 };
 
 const shuffleOff = () => {
   randomSong = false;
+  shuffleBtn.classList.remove("randomActive");
 };
 
 //overall repeat function
@@ -106,13 +106,13 @@ const repeating = () => {
 const repeatOn = () => {
   repeatSong = true;
   currentSong.loop = true;
-  // repeatBtn.classList.add("active");
+  repeatBtn.classList.add("repeatActive");
 };
 
 const repeatOff = () => {
   repeatSong = false;
   currentSong.loop = false;
-  // repeatBtn.classList.remove("active");
+  repeatBtn.classList.remove("repeatActive");
 };
 
 //overall playPause function
@@ -124,6 +124,7 @@ const playPause = () => {
 const playSong = () => {
   currentSong.play();
   songPlaying = true;
+  playPauseBtn.classList.add("playActive");
   playPauseBtn.innerHTML = '<i class="fa-sharp fa-solid fa-pause"></i>';
 
   //////rotate tape rings of cassette/////
@@ -134,6 +135,7 @@ const playSong = () => {
 const pauseSong = () => {
   currentSong.pause();
   songPlaying = false;
+  playPauseBtn.classList.remove("playActive");
   playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
 };
 
