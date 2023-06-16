@@ -1,10 +1,7 @@
 const songTitle = document.querySelector(".song-title");
 const artistName = document.querySelector(".song-artist");
 
-const randomBtn = document.querySelector("random");
-const prevBtn = document.getElementById("prev");
 const playPauseBtn = document.getElementById("play-pause");
-const nextBtn = document.getElementById("next");
 const repeatBtn = document.getElementById("repeat");
 
 const slider = document.querySelector(".slider");
@@ -175,7 +172,7 @@ const prevSong = () => {
 const slideTo = () => {
   //calculate position by percentage of slider relative to duration of the song
   let slideTo = currentSong.duration * (slider.value / 100);
-  currentSong.currentTime = slideTo;
+  currentSong.currentTime = slideTo; 
 };
 
 //setUpdate function
