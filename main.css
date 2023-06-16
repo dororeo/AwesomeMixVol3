@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body{
     background: linear-gradient(-45deg, #1e1e1e, #656668, #1e1e1e, #656668);
@@ -47,7 +47,7 @@ body{
 .song-artist{
     padding: 5px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
