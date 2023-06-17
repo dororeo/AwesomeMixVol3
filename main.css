@@ -26,6 +26,48 @@ body{
 	}
 }
 
+.rings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tape-ring1, .tape-ring2 {
+    margin-top: 305px;
+    display: flex;
+    position: absolute;
+}
+
+.tape-ring1 {
+    margin-left: -147px;
+}
+
+.tape-ring2 {
+    margin-left: 143px;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.cassette-body{
+    height: 275px;
+    width: 400px;
+    padding-bottom: 50px;
+    background-image: url("images/awesome\ mix\ vol\ 3\ cassette\ background.png");
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .walkman{
     align-items: center;
     justify-content: center;

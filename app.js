@@ -6,6 +6,9 @@ const repeatBtn = document.getElementById("repeat");
 const shuffleBtn = document.getElementById("random")
 const slider = document.querySelector(".slider");
 
+const leftRing = document.querySelector(".tape-ring1");
+const rightRing = document.querySelector(".tape-ring2");
+
 let currentTime = document.querySelector(".current-time");
 let songDuration = document.querySelector(".song-duration");
 let currentSong = document.createElement("audio");
@@ -128,6 +131,8 @@ const playSong = () => {
   playPauseBtn.innerHTML = '<i class="fa-sharp fa-solid fa-pause"></i>';
 
   //////rotate tape rings of cassette/////
+  leftRing.classList.add("rotate");
+  rightRing.classList.add("rotate");
   // rotateRings();
 };
 
@@ -137,6 +142,9 @@ const pauseSong = () => {
   songPlaying = false;
   playPauseBtn.classList.remove("playActive");
   playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+
+  leftRing.classList.remove("rotate");
+  rightRing.classList.remove("rotate");
 };
 
 //6. next song
