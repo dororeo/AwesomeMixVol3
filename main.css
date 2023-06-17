@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body{
-    background: linear-gradient(-45deg, #1e1e1e, #656668, #1e1e1e, #656668);
+    background: linear-gradient(-30deg, #1e1e1e, #656668, #1e1e1e, #cdcdcd);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 12s ease infinite;
 	height: 100vh;
     display: flex;
     flex-direction: column;
