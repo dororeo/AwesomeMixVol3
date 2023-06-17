@@ -3,7 +3,6 @@
 body{
     background: radial-gradient(#1e1e1e, #656668, #1e1e1e, #666565);
 	background-size: 600% 600%;
-    background-position: absolute;
 	animation: gradient 12s ease infinite;
 	height: 100vh;
     display: flex;
@@ -64,7 +63,7 @@ body{
     height: 275px;
     width: 400px;
     padding-bottom: 50px;
-    background-image: url("images/casette\ 2.png");
+    background-image: url("images/awesome\ mix.png");
     background-size: 350px;
     background-repeat: no-repeat;
     background-position: center;
