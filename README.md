@@ -22,7 +22,7 @@
 2. Respective text displays update accordingly (song title & artist)
 3. Responsive slider (update audio and timer display on click)
 
-![](images/IMG_0505.jpg)
+![](images/IMG_0506.jpg)
 
 #### Additional Features added later
 
@@ -44,7 +44,7 @@
 #### Possible Improvements
 
 1. Volume control
-2. Previous song with shuffle on: Brings users to the song listed before the curent one, doesn't return user to the last played. 
+2. Previous song button with shuffle on: instead of bringing users to the song played previously, it returns to "shuffle-off" mode, returning to the song before the song currently playing. (original song order) 
 
 
 ![](images/groot%20gif.gif)
