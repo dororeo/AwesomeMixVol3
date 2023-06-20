@@ -27,6 +27,13 @@ body{
 	}
 }
 
+.now-playing{
+    padding-top: 0px;
+    font-weight: 400;
+    font-size: 12px;
+    text-shadow: 1px 1.5px black;
+}
+
 .rings{
     display: flex;
     align-items: center;
@@ -34,7 +41,7 @@ body{
 }
 
 .tape-ring1, .tape-ring2 {
-    margin-top: 305px;
+    margin-top: 230px;
     display: flex;
     position: absolute;
 }
@@ -60,7 +67,7 @@ body{
 }
 
 .cassette-body{
-    height: 275px;
+    height: 200px;
     width: 400px;
     padding-bottom: 50px;
     background-image: url("images/awesome\ mix.png");
@@ -84,11 +91,13 @@ body{
 
 .song-title{
     padding: 5px;
+    margin-top: 25px;
     font-size: 20px;
+    text-shadow: 1px 2px black;
 }
 
 .song-artist{
-    padding: 5px;
+    margin-bottom: 25px;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;

@@ -12,6 +12,7 @@ const rightRing = document.querySelector(".tape-ring2");
 let currentTime = document.querySelector(".current-time");
 let songDuration = document.querySelector(".song-duration");
 let currentSong = document.createElement("audio");
+let nowPlaying = document.querySelector(".now-playing");
 
 let songIndex = 0;
 let songPlaying = false;
@@ -24,41 +25,49 @@ const trackList = [
     name: "Creep (Acoustic)",
     artist: "Radiohead",
     music: "songs/01.mp3",
+    no: 1
   },
   {
     name: "Crazy on You",
     artist: "Heart",
     music: "songs/02.mp3",
+    no: 2
   },
   {
     name: "Since You've Been Gone",
     artist: "Rainbow",
     music: "songs/03.mp3",
+    no: 3
   },
   {
     name: "In the Meantime",
     artist: "Spacehog",
     music: "songs/04.mp3",
+    no: 4
   },
   {
     name: "I'm Always Chasing Rainbows",
     artist: "Alice Cooper",
     music: "songs/05.mp3",
+    no: 5
   },
   {
     name: "San Francisco",
     artist: "The Mowgli's",
     music: "songs/06.mp3",
+    no: 6
   },
   {
     name: "No Sleep Till Brooklyn",
     artist: "Beastie Boys",
     music: "songs/07.mp3",
+    no: 7
   },
   {
     name: "Dog Days Are Over",
     artist: "Florence + The Machine",
     music: "songs/08.mp3",
+    no: 8
   },
 ];
 
@@ -72,6 +81,7 @@ const loadSong = (songIndex) => {
 
   songTitle.innerText = trackList[songIndex].name;
   artistName.innerText = trackList[songIndex].artist;
+  nowPlaying.innerText = "NOW PLAYING " + trackList[songIndex].no + " OF 8";
 
   updateTime = setInterval(setUpdate, 1000);
   currentSong.addEventListener("ended", nextSong);
